@@ -1,0 +1,801 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #2d2d2d;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#999999;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #66cccc;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #f99157;
+}
+.markdown-body em{
+  color: #ffcc66;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #99cc99;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#99cc99;stroke: #99cc99;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #999999;
+  vertical-align: middle;
+  background-color: #333333;
+  border: 1px solid #494949;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #494949;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #9b9b9b;
+  border-left: .25em solid #f2777a;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #434343;
+  color: #66cccc;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #66cccc;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #66cccc;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #66cccc;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #66cccc;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #66cccc;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #717171;
+}
+
+.markdown-body table tr {
+  background-color: #2d2d2d;
+  border-top: 1px solid #717171;
+}
+
+.markdown-body table th {
+  background-color: #434343;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #323232;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #333333;
+  color: #999999;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #999999;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #494949;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #333333;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #48be66;
+}
+
+.token.punctuation {
+    color: #8b86c9;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #8b86c9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #e6424b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #c33795;
+}
+
+.token.function,
+.token.class-name {
+    color: #67878e;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d38e63;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #6b6b6b;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #6b6b6b;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style> <style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script>window.MathJax = {     tex: { tags: 'ams', inlineMath: [ ['$','$'], ['\\(','\\)'] ] },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="%E8%8D%A3%E8%80%80%E4%B9%8B%E6%80%92%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>荣耀之怒用户协议</h1>
+<p>特别提示：<br />
+【审慎阅读】您在申请注册流程中点击同意本协议之前，应当认真阅读本协议。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任、法律适用和争议管辖等以粗体或下划线标识的重要条款，您应重点阅读。如您对本协议有任何疑问，可向荣耀之怒客服咨询。</p>
+<p>【签约动作】当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，即表示您已充分阅读、充分理解并接受本协议的全部内容，并与我们达成一致，成为荣耀之怒的用户。阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，或对协议未充分理解或存有异议，您应立即停止注册程序并退出。</p>
+<p>一、概述</p>
+<p>本协议是确定荣耀之怒与用户之间关于荣耀之怒APP（简称“本APP”）软件服务的权利义务的依据。<br />
+本协议内容包括协议正文及荣耀之怒就本APP及相关事项所制定和修订的相关管理规范；管理规范一经公布并在法律法规规定的期限届满后即对本协议发生补充和修订的效力。</p>
+<p>二、账号的注册和存续</p>
+<p>用户在使用本APP前需注册荣耀之怒账号。荣耀之怒账号应当使用用户个人手机号码绑定注册。已被使用于注册荣耀之怒账号的手机号码以及已被荣耀之怒封禁的手机号码不得用于注册荣耀之怒账号。用户同意荣耀之怒将其手机号码及手机设备识别码等作为用户身份识别信息。<br />
+注册为荣耀之怒用户的自然人应具有完全民事行为能力，非具有完全民事行为能力的自然人应在监护人的代理或许可使用本APP。您一旦注册成功，我们将推定您具有相应的民事行为能力（但是有相反证据足以推翻的除外）。</p>
+<p>用户注册成功后，荣耀之怒将为用户配置账号，该账号之所有权归荣耀之怒所有，用户在本协议有效期内仅享有使用权。未经荣耀之怒同意，用户的账号仅供用户本人使用，账号信息和权限不得以转让、赠与、借用、售卖或租用等方式许可给第三方使用或和第三方共同使用。用户应自行负责保管账号的用户名和密码等信息，否则因该等事项引发的任何侵权、违约等法律责任由用户自行承担。<br />
+荣耀之怒有权要求全部用户进行实名认证，且用户应提供真实资料进行认证。用户注册账号所提供和使用的信息应当真实、有效、合法，如果原提供的信息发生变更，则应及时向荣耀之怒申请更改，否则，因此造成荣耀之怒无法有效联系到用户，或无法及时处理和用户相关的争议等事项的，相关不利后果由用户自行承担。</p>
+<p>荣耀之怒有权根据法律法规或政策规定，或根据自行制定的规范或规则，对违规、不当使用等账号予以限制权利或予以注销，且不因此对用户承担法律责任。荣耀之怒根据自行判断，认定用户账号存在可能侵害或影响其他用户权益的，有权对用户账户进行限制或注销。如果您需要注销您的帐号，您可以通过荣耀之怒公布的方式、程序进行，我们将在核实您的身份并清理帐号中的资产（例如已充值或已获得的虚拟资产等）后，为您提供帐号注销服务。</p>
+<p>三、用户信息保护和使用</p>
+<p>荣耀之怒APP系基于电子商务交易平台的APP产品，基于购物业务需求，用户注册时应当授权荣耀之怒对于注册时提供的个人信息作合理使用。前述用户个人信息：头像、姓名、身份证号、联系地址、交易订单信息、付款账号信息等。</p>
+<p>荣耀之怒承诺保护用户个人信息和隐私，非因本协议约定、法定要求或其它有权机关要求，不使用或向第三方披露用户个人信息。</p>
+<p>如因荣耀之怒过错，导致用户个人信息被泄露或个人隐私被侵权，荣耀之怒依法承担责任。<br />
+具体用户信息保护和使用规定，可详见我们制定的《隐私权政策》。</p>
+<p>四、荣耀之怒APP使用规范</p>
+<p>用户注册和使用本APP过程中所制作、上载、复制、发布、传播的任何内容，包括但不限于账号头像、名称、用户说明等注册信息及认证资料，或文字、语音、图片、视频、图文等用户所发送、回复或自动回复消息和相关链接页面，以及其他使用用户账号或本APP所产生的内容均不得违反现行法律、法规、规章、政策规定；如果用户在境外使用本APP，应同时遵守所在地或相关国家（地区）的法律法规。</p>
+<p>用户不得利用“荣耀之怒”账号或本APP制作、上载、复制、发布、传播如下法律、法规和政策禁止的内容：</p>
+<ol>
+<li>反对宪法所确定的基本原则的；</li>
+<li>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</li>
+<li>损害国家荣誉和利益的；</li>
+<li>煽动民族仇恨、民族歧视，破坏民族团结的；</li>
+<li>破坏国家宗教政策，宣扬邪教和封建迷信的；</li>
+<li>散布谣言，扰乱社会秩序，破坏社会稳定的；</li>
+<li>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</li>
+<li>侮辱或者诽谤他人，侵害他人合法权益的；</li>
+<li>含有法律、行政法规禁止的其他内容的信息。</li>
+</ol>
+<p>用户不得利用“荣耀之怒”账号或本APP制作、上载、复制、发布、传播如下干扰“荣耀之怒”正常运营，以及侵犯其他用户或第三方合法权益的内容：</p>
+<ol>
+<li>含有任何性或性暗示的；</li>
+<li>含有辱骂、恐吓、威胁内容的；</li>
+<li>含有骚扰、垃圾广告、恶意信息、诱骗信息的；</li>
+<li>涉及他人隐私、个人信息或资料的；</li>
+<li>侵害他人名誉权、肖像权、知识产权、商业秘密等合法权利的；</li>
+<li>含有其他干扰本APP正常运营和侵犯其他用户或第三方合法权益内容的信息。</li>
+</ol>
+<p>用户不得利用“荣耀之怒”账号或本APP进行如下行为：</p>
+<ol>
+<li>提交、发布虚假信息，或盗用他人头像或资料，冒充、利用他人名义的；</li>
+<li>虚构事实、隐瞒真相以误导、欺骗他人的；</li>
+<li>利用技术手段批量建立虚假账号的；</li>
+<li>利用“荣耀之怒”账号或本APP从事任何违法犯罪活动的；</li>
+<li>制作、发布与以上行为相关的方法、工具，或对此类方法、工具进行运营或传播，无论这些行为是否为商业目的；</li>
+<li>制造虚假订单，利用淘宝联盟结算规则漏洞进行售后维权等不正当行为；</li>
+<li>其他违反法律法规规定、侵犯其他用户合法权益、干扰“荣耀之怒”正常运营或荣耀之怒未明示授权的行为。</li>
+</ol>
+<p>荣耀之怒提供的本APP中可能包括广告，用户同意在使用过程中显示荣耀之怒和第三方供应商、合作伙伴提供的广告。</p>
+<p>用户在本APP中或通过本APP所传送、发布的任何内容并不反映或代表，也不得被视为反映或代表荣耀之怒的观点、立场；用户不得以荣耀之怒的名义传送或发布信息；也不得以易被公众或第三方混淆为荣耀之怒官方意见的方式传送或发布信息。</p>
+<p>用户须对利用“荣耀之怒”账号或本APP传送信息的真实性、合法性、无害性、准确性、有效性等全面负责。如因此给荣耀之怒或第三方造成损害的，用户应当依法予以赔偿。<br />
+基于互联网的特殊性，荣耀之怒有权制定各类荣耀之怒APP使用管理规范，包括荣耀之怒违约推广规则及处罚等。</p>
+<p>五、违规用户的处理</p>
+<p>如果荣耀之怒发现用户违反本协议条款，或他人投诉用户违规并经荣耀之怒审查属实，荣耀之怒有权根据法律规定对相关内容（包括但不限于用户资料、发贴记录等）进行删除，并视情节轻重对违规用户处以包括但不限于警告、账号冻结或封禁、设备封禁、功能封禁、不予佣金结算等处罚。注：荣耀之怒对投诉内容的审查仅为初步表面审查，不对审查结论承担责任；如果用户投诉内容存在异议，则应于投诉方接洽处理或采取法律途径解决争议。</p>
+<p>用户理解并同意，荣耀之怒有权依合理判断对违反有关法律法规或本协议规定的行为进行处罚，对违法违规的任何用户采取适当的法律行动，并依据法律法规保存有关信息向有关部门报告等，用户应承担由此而产生的一切法律责任。</p>
+<p>被处理用户可提交申诉，荣耀之怒将对申诉进行审查，并自行合理判断决定是否变更处罚措施。对于因投诉所导致的处理，荣耀之怒仍有权根据投诉方与用户共同确定的意见或司法机关生效法律文书增加、变更或撤销对用户的处理。</p>
+<p>用户理解并同意，因用户违反本协议约定或发生其它过错，导致或产生的任何第三方向荣耀之怒或其合作方、关联方主张任何索赔、要求，如果造成荣耀之怒或其合作方、关联方发生的任何损失，包括合理的律师费，用户应当向荣耀之怒与合作方、关联方承担赔偿责任。用户同意，荣耀之怒可以将合作方、关联方的损失作为其自身损失向用户进行索赔，或者协助合作方、关联方向用户主张权利。</p>
+<p>六、本协议的终止</p>
+<p>如果用户违反本协议约定，发生其它违法或不当行为，荣耀之怒有权终止本协议，且不因终止协议承担任何责任；但本协议的终止不影响用户对已经发生的交易或损失承担法律责任。</p>
+<p>荣耀之怒注销用户账号，则本协议即在用户和荣耀之怒之间终止。</p>
+<p>用户不同意荣耀之怒就本APP所自行制定的使用规范，或不同意荣耀之怒对本协议所作出的修订，则本协议在荣耀之怒和该用户之间终止。</p>
+<p>七、其他条款</p>
+<p>荣耀之怒再次郑重提醒用户注意本协议中免除荣耀之怒责任和限制用户权利的条款，请用户仔细阅读，自主考虑风险。未成年人应在法定监护人的陪同下阅读本协议。</p>
+<p>本协议的效力、解释及纠纷的解决，适用于中华人民共和国法律。若用户和荣耀之怒之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，用户同意将纠纷或争议提交荣耀之怒住所地有管辖权的人民法院管辖。</p>
+<p>本协议的任何条款无论因何种原因无效或不具可执行性，其余条款仍有效，对双方具有约束力。</p>
+<p>八、联系我们</p>
+<p>如果您对本隐私政策有任何疑问或建议，请通过以下方式与我们联系：[<a href="mailto:wzr20240601@163.com">wzr20240601@163.com</a>]<br />
+我们的客服将在15个工作日内给予回复,感谢您的支持</p>
+</div></body></html>
